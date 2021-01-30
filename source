@@ -1,0 +1,480 @@
+game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{
+	Text = "Thanks for Using Wave Admin",
+	Color = Color3.new(0, 0, 0.498039)
+})
+
+game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{
+	Text = "Created by xfame, Anti-Ban by szissorz",
+	Color = Color3.new(0, 0, 0.498039)
+})
+
+local waveadmin = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local panel = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner_2 = Instance.new("UICorner")
+local cmdbar = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+local CMDsList = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Hub = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local Exit = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local OPEN = Instance.new("TextButton")
+
+--Properties:
+
+waveadmin.Name = "waveadmin"
+waveadmin.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Main.Name = "Main"
+Main.Parent = waveadmin
+Main.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Main.Position = UDim2.new(0.317683518, 0, 0.322354525, 0)
+Main.Size = UDim2.new(0, 662, 0, 271)
+
+panel.Name = "panel"
+panel.Parent = Main
+panel.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+panel.Size = UDim2.new(0, 662, 0, 59)
+
+UICorner.Parent = panel
+
+ImageLabel.Parent = panel
+ImageLabel.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.0181268882, 0, 0.0677966103, 0)
+ImageLabel.Size = UDim2.new(0, 62, 0, 51)
+ImageLabel.Image = "rbxassetid://6298988416"
+ImageLabel.ScaleType = Enum.ScaleType.Crop
+
+UICorner_2.Parent = Main
+
+cmdbar.Name = "cmdbar"
+cmdbar.Parent = Main
+cmdbar.BackgroundColor3 = Color3.fromRGB(32, 32, 32)
+cmdbar.Position = UDim2.new(0.111782484, 0, 0.468634665, 0)
+cmdbar.Size = UDim2.new(0, 497, 0, 50)
+cmdbar.Font = Enum.Font.SourceSansBold
+cmdbar.Text = ""
+cmdbar.TextColor3 = Color3.fromRGB(255, 255, 255)
+cmdbar.TextSize = 30.000
+cmdbar.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+UICorner_3.Parent = cmdbar
+
+CMDsList.Name = "CMDsList"
+CMDsList.Parent = Main
+CMDsList.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+CMDsList.Position = UDim2.new(0.0604229569, 0, 0.752767503, 0)
+CMDsList.Size = UDim2.new(0, 155, 0, 50)
+CMDsList.Font = Enum.Font.SourceSansLight
+CMDsList.Text = "Commands"
+CMDsList.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMDsList.TextSize = 25.000
+CMDsList.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+UICorner_4.Parent = CMDsList
+
+Hub.Name = "Hub"
+Hub.Parent = Main
+Hub.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Hub.Position = UDim2.new(0.705438077, 0, 0.752767503, 0)
+Hub.Size = UDim2.new(0, 155, 0, 50)
+Hub.Font = Enum.Font.SourceSansLight
+Hub.Text = "Hub"
+Hub.TextColor3 = Color3.fromRGB(255, 255, 255)
+Hub.TextSize = 25.000
+Hub.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+UICorner_5.Parent = Hub
+
+Exit.Name = "Exit"
+Exit.Parent = Main
+Exit.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Exit.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Exit.BorderSizePixel = 0
+Exit.Position = UDim2.new(0.92134279, 0, 0.0469498895, 0)
+Exit.Size = UDim2.new(0, 35, 0, 32)
+Exit.Font = Enum.Font.SourceSansBold
+Exit.Text = "X"
+Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exit.TextSize = 30.000
+
+UICorner_6.Parent = Exit
+
+OPEN.Name = "OPEN"
+OPEN.Parent = waveadmin
+OPEN.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+OPEN.Position = UDim2.new(0, 0, 0.953703701, 0)
+OPEN.Size = UDim2.new(0, 200, 0, 50)
+OPEN.Font = Enum.Font.SourceSansBold
+OPEN.Text = "OPEN"
+OPEN.TextColor3 = Color3.fromRGB(255, 255, 255)
+OPEN.TextSize = 40.000
+
+-- Scripts:
+
+local function XFKQCAS_fake_script() -- cmdbar.MainScript 
+	local script = Instance.new('LocalScript', cmdbar)
+
+	local words = {
+		text = "UFO", --You can add different words, just make sure you sepperate them with commas.
+	}
+	
+	script.Parent.FocusLost:Connect(function()
+		if script.Parent.Text == words.text then
+			if game.Players.LocalPlayer.PlayerGui:FindFirstChild('ufo') then
+				game.Players.LocalPlayer.PlayerGui.ufo:Destroy()
+				if game.Workspace:FindFirstChild('ufoparthaha') then
+					game.Workspace.ufoparthaha:Destroy()
+				end
+			end
+			wait()
+			local VanGui = Instance.new("ScreenGui")
+			local Van = Instance.new("Frame")
+			local idk = Instance.new("TextBox")
+			local dsa = Instance.new("TextButton")
+	
+			VanGui.Name = "ufo"
+			VanGui.Parent = game.Players.LocalPlayer.PlayerGui
+	
+			Van.Name = "ufo"
+			Van.Parent = VanGui 
+			Van.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
+			Van.BorderColor3 = Color3.new(0, 0, 0)
+			Van.Position = UDim2.new(0, 5, 0.8, 0)
+			Van.Size = UDim2.new(0, 200, 0, 45)
+	
+			idk.Name = "idk"
+			idk.Parent = Van
+			idk.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
+			idk.BorderColor3 = Color3.new(0, 0, 0)
+			idk.Size = UDim2.new(1, 0, 0, 20)
+			idk.Font = Enum.Font.SciFi
+			idk.FontSize = Enum.FontSize.Size14
+			idk.Text = "Username"
+			idk.TextColor3 = Color3.new(1, 1, 1)
+			idk.TextScaled = true
+			idk.TextStrokeTransparency = 0
+			idk.TextWrapped = true
+	
+			dsa.Name = "dsa"
+			dsa.Parent = Van
+			dsa.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
+			dsa.BorderColor3 = Color3.new(0, 0, 0)
+			dsa.Position = UDim2.new(0, 0, 1, -25)
+			dsa.Size = UDim2.new(1, 0, 0, 25)
+			dsa.Font = Enum.Font.SciFi
+			dsa.FontSize = Enum.FontSize.Size14
+			dsa.Text = "UFO"
+			dsa.TextColor3 = Color3.new(1, 1, 1)
+			dsa.TextScaled = true
+			dsa.TextStrokeTransparency = 0
+			dsa.TextWrapped = true
+	
+	
+			dsa.MouseButton1Click:connect(function()
+				Victim = idk.Text
+				if game.Players:FindFirstChild(Victim) and game.Workspace:FindFirstChild('ufoparthaha') == nil then
+	
+					local u1 = Instance.new('Part')
+					u1.Name = 'ufoparthaha'
+					u1.Parent = game.Workspace
+					u1.Material = Enum.Material.DiamondPlate
+					u1.Anchored = true
+					u1.Size = Vector3.new(20,3,20)
+					u1.CFrame = CFrame.new(0,50,0)
+					local u2 = Instance.new('SpecialMesh')
+					u2.Parent = u1
+					u2.MeshType = Enum.MeshType.Sphere
+					local u3 = Instance.new('Part')
+					u3.Parent = u1
+					u3.Material = Enum.Material.SmoothPlastic
+					u3.Anchored = true
+					u3.Size = Vector3.new(15,10,15)
+					u3.CFrame = CFrame.new(0,54,0)
+					u3.Transparency = 0.6
+					u3.BrickColor = BrickColor.new('Cyan')
+					local u4 = Instance.new('SpecialMesh')
+					u4.Parent = u3
+					local u5 = Instance.new('Part')
+					u5.Parent = u1
+					u5.Material = Enum.Material.Neon
+					u5.Anchored = true
+					u5.Size = Vector3.new(5,1,5)
+					u5.CFrame = CFrame.new(0,49,0)
+					u5.Transparency = 0.7
+					u5.BrickColor = BrickColor.new('Toothpaste')
+					u5.CanCollide = false
+					local u6 = Instance.new('Part')
+					u6.CFrame = CFrame.new(0,5,0)
+					u6.Parent = u1
+					u6.Anchored = true
+					u6.CanCollide = false
+					u6.Transparency = 1
+					local u7 = Instance.new('Part')
+					u7.CFrame = CFrame.new(0,8,0)
+					u7.Parent = u1
+					u7.Anchored = true
+					u7.CanCollide = false
+					u7.Transparency = 1
+					local u8 = Instance.new('Part')
+					u8.CFrame = CFrame.new(0,11,0)
+					u8.Parent = u1
+					u8.Anchored = true
+					u8.CanCollide = false
+					u8.Transparency = 1
+					local u9 = Instance.new('Part')
+					u9.CFrame = CFrame.new(0,14,0)
+					u9.Parent = u1
+					u9.Anchored = true
+					u9.CanCollide = false
+					u9.Transparency = 1
+					local u10 = Instance.new('Part')
+					u10.CFrame = CFrame.new(0,17,0)
+					u10.Parent = u1
+					u10.Anchored = true
+					u10.CanCollide = false
+					u10.Transparency = 1
+					local u11 = Instance.new('Part')
+					u11.CFrame = CFrame.new(0,20,0)
+					u11.Parent = u1
+					u11.Anchored = true
+					u11.CanCollide = false
+					u11.Transparency = 1
+					local u12 = Instance.new('Part')
+					u12.CFrame = CFrame.new(0,23,0)
+					u12.Parent = u1
+					u12.Anchored = true
+					u12.CanCollide = false
+					u12.Transparency = 1
+					local u13 = Instance.new('Part')
+					u13.CFrame = CFrame.new(0,26,0)
+					u13.Parent = u1
+					u13.Anchored = true
+					u13.CanCollide = false
+					u13.Transparency = 1
+					local u14 = Instance.new('Part')
+					u14.CFrame = CFrame.new(0,29,0)
+					u14.Parent = u1
+					u14.Anchored = true
+					u14.CanCollide = false
+					u14.Transparency = 1
+					local u15 = Instance.new('Part')
+					u15.CFrame = CFrame.new(0,32,0)
+					u15.Parent = u1
+					u15.Anchored = true
+					u15.CanCollide = false
+					u15.Transparency = 1
+					local u16 = Instance.new('Part')
+					u16.CFrame = CFrame.new(0,35,0)
+					u16.Parent = u1
+					u16.Anchored = true
+					u16.CanCollide = false
+					u16.Transparency = 1
+					local u17 = Instance.new('Part')
+					u17.CFrame = CFrame.new(0,38,0)
+					u17.Parent = u1
+					u17.Anchored = true
+					u17.CanCollide = false
+					u17.Transparency = 1
+					local u18 = Instance.new('Part')
+					u18.CFrame = CFrame.new(0,41,0)
+					u18.Parent = u1
+					u18.Anchored = true
+					u18.CanCollide = false
+					u18.Transparency = 1
+					local u19 = Instance.new('Part')
+					u19.CFrame = CFrame.new(0,44,0)
+					u19.Parent = u1
+					u19.Anchored = true
+					u19.CanCollide = false
+					u19.Transparency = 1
+					local u20 = Instance.new('Part')
+					u20.CFrame = CFrame.new(0,47,0)
+					u20.Parent = u1
+					u20.Anchored = true
+					u20.CanCollide = false
+					u20.Transparency = 1
+					local u21 = Instance.new('Part')
+					u21.CFrame = CFrame.new(0,50,0)
+					u21.Parent = u1
+					u21.Anchored = true
+					u21.CanCollide = false
+					u21.Transparency = 1
+					local u22 = Instance.new('Part')
+					u22.CFrame = CFrame.new(0,53,0)
+					u22.Parent = u1
+					u22.Anchored = true
+					u22.CanCollide = false
+					u22.Transparency = 1
+					local u23 = Instance.new('Part')
+					u23.CFrame = CFrame.new(0,54,0)
+					u23.Parent = u1
+					u23.Anchored = true
+					u23.CanCollide = false
+					u23.Transparency = 1
+					function tractordown()
+						for i=1, 47 do
+							local cf = u5.CFrame
+							u5.Size = u5.Size + Vector3.new(0,1,0)
+							u5.CFrame = cf - Vector3.new(0,0.5,0)
+							wait()
+						end
+					end
+					function tractorup()
+						for i=1, 47 do
+							local cf = u5.CFrame
+							u5.Size = u5.Size - Vector3.new(0,1,0)
+							u5.CFrame = cf + Vector3.new(0,0.5,0)
+							wait()
+						end
+					end
+					function MoveX(model, Position)
+						model.CFrame = model.CFrame + Vector3.new(Position,0,0)
+						for _,part in pairs (model:GetChildren()) do
+							if part.ClassName == "Part" then
+								part.CFrame = part.CFrame + Vector3.new(Position,0,0)
+							end
+						end
+					end
+					function MoveSpawn(model, PLAYERPOS)
+						model.CFrame = model.CFrame + PLAYERPOS + Vector3.new(300,-5,0) 
+						for _,part in pairs (model:GetChildren()) do
+							if part.ClassName == "Part" then
+								part.CFrame = part.CFrame + PLAYERPOS + Vector3.new(300,-5,0)
+							end
+						end
+					end
+					if game.Players:FindFirstChild(Victim) ~= nil then
+						game.Players[Victim].Character.HumanoidRootPart.Anchored = true
+						game.Players[Victim].Character.Humanoid.WalkSpeed = 0
+						game.Players[Victim].Character.Humanoid.JumpPower = 0
+						MoveSpawn(u1,game.Players[Victim].Character.HumanoidRootPart.Position) 
+					end 
+					for i=1,100 do
+						MoveX(u1,-3)
+						wait()
+					end
+					tractordown()
+					game.Players[Victim].Character.Head.face.Texture = "rbxassetid://629925029"
+					SCREAM = Instance.new("Sound")
+					SCREAM.Parent = game.Players[Victim].Character.Head
+					SCREAM.SoundId = "rbxassetid://138167455"
+					SCREAM:Play()
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u6.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u7.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u8.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u9.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u10.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u11.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u12.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u13.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u14.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u15.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u16.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u17.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u18.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u19.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u20.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u21.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u22.CFrame
+					wait(0.1)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u23.CFrame
+					tractorup()
+					for i=1,50 do
+						MoveX(u1,-3)
+						if game.Players[Victim] ~= nil then
+							game.Players[Victim].Character.HumanoidRootPart.CFrame = u23.CFrame
+						end
+						wait(.05)
+					end
+					wait(0.5)
+					game.Players[Victim].Character.HumanoidRootPart.CFrame = u21.CFrame
+					game.Players[Victim].Character.Humanoid.Health = 0
+					game.Players[Victim].Character.HumanoidRootPart.Anchored = false
+					for i=1,50 do
+						MoveX(u1,-3)
+						wait()
+					end
+					u1:Destroy()
+				end  
+			end)
+		end
+	end)
+	
+	local words2 = {
+		text = "OOF", --You can add different words, just make sure you sepperate them with commas.
+	}
+	
+	script.Parent.FocusLost:Connect(function()
+		if script.Parent.Text == words2.text then
+			while wait() do
+				for i,v in pairs(game:GetService'Players':GetPlayers()) do
+					if v.Character ~= nil and v.Character:FindFirstChild'Head' then
+						for _,x in pairs(v.Character.Head:GetChildren()) do
+							if x:IsA'Sound' then x.Playing = true end
+						end
+					end
+				end
+			end
+		end
+	end)
+	
+	local words3 = {
+		text = "RagDoll1", --You can add different words, just make sure you sepperate them with commas.
+	}
+	
+	script.Parent.FocusLost:Connect(function()
+		if script.Parent.Text == words3.text then
+			loadstring(game:HttpGet(('https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/RagdollEngineGUI.lua'),true))()
+		end
+	end)
+	
+	local words4 = {
+		text = "RagDoll2", --You can add different words, just make sure you sepperate them with commas.
+	}
+	
+	script.Parent.FocusLost:Connect(function()
+		if script.Parent.Text == words4.text then
+			loadstring(game:HttpGet(('https://pastebin.com/raw/MeAL9tUE'),true))()
+		end
+	end)
+	
+	
+	
+end
+coroutine.wrap(XFKQCAS_fake_script)()
+
+OPEN.Visible=true
+Main.Visible=false
+
+OPEN.MouseButton1Down:connect(function()
+	Main.Visible=true
+	OPEN.Visible=false
+end)
+
+Exit.MouseButton1Down:connect(function()
+	Main.Visible=false
+	OPEN.Visible=true
+end)
+
